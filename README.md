@@ -1,4 +1,4 @@
-oteuta klikkaus-peli tyyliin:
+Toteuta klikkaus-peli tyyliin:
 
 Cookie clicker (http://orteil.dashnet.org/cookieclicker/)
 Pizza clicker (https://www.crazygames.com/game/pizza-clicker)
