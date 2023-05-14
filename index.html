@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker-peli</title>
+    <link rel="icon" type="image/x-icon" href="kuvat.img/pallo.PNG">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+</header>
+<body id="body">
+  <div id="tausta">  </div>
+
+<div class="kokonaisuus" >  
+    <div class="kuutio" >
+      <div class="etu" ></div>
+      <div class="taka" ></div>
+      <div class="oikea" ></div>
+      <div class="vasen" ></div>    
+      <div class="kansi" >
+        <div class="varjo"  ></div></div></div><div></div>
+    
+  <div class="lattia" ></div></div>
+  <div class="pallo"  ></div>
+  <div class="pallo2"  ></div>
+  <div id="numero"></div>
+  <div class="box1">
+      <button type="button" id="eka" onclick="ekataso()" disabled ><p>1 PALLO/CLICK</p> <p id="hinta1"></p></button>
+      <button type="button" id="toka" onclick="tokataso()" disabled ><p>10 PALLO/CLICK</p> <p id="hinta2"></p></button>
+      <button type="button" id="kolmas" onclick="kolmastaso()" disabled ><p>25 PALLO/CLICK</p> <p id="hinta3"></p></button>
+      <button type="button" id="neljas" onclick="neljastaso()" disabled ><p>100 PALLO/CLICK</p> <p id="hinta4"></p></button>
+      <button type="button" id="viides" onclick="viidestaso()" disabled ><p>500 PALLO/CLICK</p> <p id="hinta5"></p></button>
+      <button type="button" id="kuudes" onclick="kuudestaso()" disabled ><p>1000 PALLO/CLICK</p> <p id="hinta6"></p></button></div>
+  <div class="box2">
+      <button type="button" id="seiska" onclick="taso1()" disabled ><p>Pallontekijä</p> <p id="hinta7"></p></button>
+      <button type="button" id="kasi" onclick="taso2()" disabled ><p>Pallokone</p> <p id="hinta8"></p></button>
+      <button type="button" id="ysi" onclick="taso3()" disabled ><p>Pallotehdas</p> <p id="hinta9"></p></button>
+      <button type="button" id="kymppi" onclick="taso4()" disabled ><p>Pallokaivos</p> <p id="hinta10"></p></button>
+      <button type="button" id="ykstoista" onclick="taso5()" disabled ><p>Pallomeri</p> <p id="hinta11"></p></button>
+      <button type="button" id="kakstoista" onclick="taso6()" disabled ><p>Palloplaneetta</p> <p id="hinta12"></p></button></div>
+  <div class="lukema"><h1 >PALLOJA     </h1><h1 id="palloja">0</h1></div>
+  <div class="ppk"><p id="perklik">1</p><p>PALLOA/CLICK</p></div>
+  <div class="pps"><p id="perS">0</p><p>PALLOA/SEKUNTI</p></div>
+  <div class="box3">
+    <div><p class="tieto">TEKIJÖITÄ</p><p id="tekija"></p></div>
+    <div><p class="tieto">KONEITA</p><p id="kone"></p></div>
+    <div><p class="tieto">TEHTAITA</p><p id="tehdas"></p></div>
+    <div><p class="tieto">KAIVOKSIA</p><p id="kaivos"></p></div>
+    <div><p class="tieto">MERIÄ</p><p id="meri"></p></div>
+    <div><p class="tieto">PLANEETTOJA</p><p id="planeetta"></p></div>
+  <button class="lopeta" onclick="lopeta()"> Aloita uusi peli!</button>
+  </div>            
+</body>
+<script src="main.js"></script>
+
+</html>

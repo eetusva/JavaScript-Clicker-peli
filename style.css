@@ -1,0 +1,291 @@
+:root{
+--nopeus:50s;
+--pallonopeus:0.6s;
+--putous:1.5s;
+}
+
+    
+
+.lukema{
+    position: fixed;
+    display: flex;
+    top: 0em;
+    color: rgb(247, 28, 28);
+    font-size: 20px;
+    left: 15%;
+     
+    }
+#palloja{
+    position: fixed;
+    right: 15%;
+    }
+body{
+    position: fixed;
+    margin-left: 15%;
+    width: 60%;
+    height: 350px;
+    display: flex;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    font-family: lucida handwriting;  
+    perspective: 600px;  
+    }
+.pallo{ 
+    position: relative;
+    width: 80px;
+    height: 80px;    
+    border-radius: 50%;
+    top: 0px;
+    right:115px;
+    background-image: radial-gradient(circle,red,#000);
+    cursor: pointer; 
+    opacity: 50%;                    
+    }  
+.pallo2{
+    position:fixed;
+    width: 80px;
+    height: 80px;    
+    border-radius: 50%;
+    top: 135px;
+    right:50%;
+    background-image: radial-gradient(circle,red,#000);
+    cursor: pointer; 
+          
+        }
+
+    
+.pallo2:active{     
+    animation: none,pomppu var(--pallonopeus) ease-out;
+}
+.varjo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(#000,#0000 40%);
+    }   
+.kokonaisuus{  
+    position:relative;  
+    transform-style: preserve-3d;
+    animation: pyoritys var(--nopeus) infinite linear;
+    }
+@keyframes pyoritys{
+    to {transform: rotateY(360deg);}
+    }
+@keyframes pomppu{        
+    0%,100%{top:130px; right: 575px;}
+    50%{height: 20pxpx; width: 20px; top: -240px;right: 500px; animation-timing-function:step-end ;}
+    }
+
+.lattia{
+    position:fixed;
+    top: 265px;
+    transform: translate(-50%,-50%) rotateX(90deg) ;   
+    width: 400px;
+    height: 400px;       
+    background-size: 100%,50px 50px;
+    background-image:   radial-gradient(#0000,#000 70%  ),repeating-conic-gradient(from 45deg,rgb(85, 82, 82) 0deg 90deg,rgb(150, 133, 133) 90deg 180deg);
+      left:75px ; 
+    }
+.kuutio{
+    position: relative;
+    width: 150px;
+    height: 150px;   
+    transform-style: preserve-3d;
+    top: 115px;
+    }
+.etu, .taka, .oikea, .vasen{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 38, 38, 0.467);
+    box-shadow: 0 0 40px #000a inset;
+    }
+.etu{transform: translateZ(75px);} 
+.oikea{ transform: rotateY(90deg) translateZ(-75px);} 
+.taka{ transform: rotateY(180deg) translateZ(75px);} 
+.vasen{ transform: rotateY(270deg) translateZ(-75px);}
+.kansi{ position: absolute;
+        width: 150px;
+        height: 150px;
+        transform: translateY(-50%)rotateX(90deg);
+        background-color: rgba(245, 38, 38, 0.467); 
+        box-shadow: 0 0 40px #000a inset       
+    }
+.box1{
+    position: fixed;
+    left: 0%;
+    top:0%;
+    width: 130px;     
+    }
+#eka,#toka,#kolmas,#neljas,#viides,#kuudes,#seiska,#kasi,#ysi,#kymppi,#ykstoista,#kakstoista{
+     padding: 3px;  
+    background-image: radial-gradient(circle,red,#000);
+    width: 130px;    
+    border: none; 
+    border-radius: 10%;
+  
+    }
+#eka:active,#toka:active,#kolmas:active,#neljas:active,#viides:active,#kuudes:active,#seiska:active,#kasi:active,#ysi:active,#kymppi:active,#ykstoista:active,#kakstoista:active{
+    position: relative;
+    animation: klik 5s ;
+    }
+
+@keyframes klik{
+    0%{top:2px}
+   
+}    
+.box2{ 
+    position: fixed;
+    right: 0%;
+    top:0%;
+    width: 130px;     
+}
+.ppk{
+    position: fixed;
+    display: flex;
+    left: 17%;
+    top: 17%;
+    color: red;
+    font-size: 20px;
+}
+#perklik{
+    padding-right: 5px;
+}
+.pps{
+    position: fixed;
+    display: flex;
+    left:63%;
+    top: 17%;
+    color: red;
+    font-size: 20px;
+}
+#perS{
+    padding-right: 5px;}
+.taustapallo,.taustapallo2,.taustapallo3,.taustapallo4,.taustapallo5,.taustapallo6,.taustapallo7{   
+    position: fixed;   
+    width:40px;
+    height: 40px;   
+    border-radius: 50%; 
+    animation: putoaa var(--putous) linear;      
+    
+}
+.taustapallo{background-image: radial-gradient(circle,red,#000);}
+.taustapallo2{background-image: radial-gradient(circle,blue,#000);    } 
+.taustapallo3{background-image: radial-gradient(circle,rgb(245, 222, 18),#000);} 
+.taustapallo4{background-image: radial-gradient(circle,rgb(12, 224, 58),#000);} 
+.taustapallo5{background-image: radial-gradient(circle,rgb(229, 229, 243),#000);} 
+.taustapallo6{background-image: radial-gradient(circle,rgb(235, 78, 39),#000);}
+.taustapallo7{background-image: radial-gradient(circle,rgb(121, 188, 233),#000);}
+
+@keyframes putoaa{
+    0%{opacity: 100%;}
+    50%{opacity: 100%;width: 30px; height: 30px;}
+    75%{opacity: 50%;width: 20px; height: 20px;}
+    100%{top: 600px; opacity:0% ;width: 10px; height: 10px;}
+
+}
+@keyframes putoaa2{
+    0%{opacity: 100%;}
+    50%{opacity: 100%;}
+    75%{opacity: 50%;}
+    100%{top: 600px; opacity:0% ;}
+
+}
+.box3{
+    text-align: center;
+    position: fixed;
+    display: flex;
+    top: 440px;
+    color: lightgrey;
+    font-size: 1em;   
+    
+} 
+.tieto{
+   padding: 5px;
+    color: black;   
+    background-image: radial-gradient(rgba(243, 237, 237, 0.877),#000 95%); 
+    
+}
+.lopeta{
+    position: fixed;
+    top: 60%;
+    left: 20%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background-image: radial-gradient(circle,grey, #000);
+}
+.lopeta:active{
+    animation:shadow 5s;
+}
+#numero{
+    position: fixed; 
+    left: 500px;
+    top: 100px;   
+    color: rgb(247, 243, 243);
+    
+}
+.numeroanim{
+    position: relative;
+    animation: haivytys 0.1s ;
+}
+@keyframes haivytys{    
+    0%{top: 90px; }
+    100%{top:60px;}
+}
+@keyframes shadow{
+    0%{height: 82px;
+    width: 82px;
+    box-shadow: 0 0px 16px 0 rgba(77, 66, 66, 0.952), 0 17px 50px 0 rgba(247, 243, 243, 0.89);
+}
+}
+@media only screen and (max-width:1000px){
+    body{
+        margin: 0%;
+        width: 100%;
+        height: 80%;
+       
+    }
+    .box1{
+
+        font-size: 2px;
+    }
+    #eka,#toka,#kolmas,#neljas,#viides,#kuudes,#seiska,#kasi,#ysi,#kymppi,#ykstoista,#kakstoista{
+        font-size: 10px;
+      
+    }
+    .box3{
+        font-size: 12px;
+        top:100%;
+ 
+    }
+    .lukema{
+        font-size: 10px;
+        left: 20%;
+    }
+    #palloja{
+        right: 22%;
+    }
+    .ppk{
+        font-size: 12px;
+        left: 20%;
+    }
+    .pps{
+        left: 58%;
+        font-size: 12px;
+    }
+
+
+}
+
+    
+
+
+
+  
+
+
+
+
